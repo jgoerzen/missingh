@@ -24,7 +24,8 @@ module Data.Tuple.Utils(
     -- * Construction
     dup, triple,
     -- * Extraction
-    fst3, snd3, thd3
+    fst3, snd3, thd3,
+    dupl
     ) where
 
 -- | Construct a pair by duplication of a single value
@@ -50,3 +51,7 @@ snd3 (a,b,c) = b
 -- | Take the third item out of a 3 element tuple
 thd3 :: (a,b,c) -> c
 thd3 (a,b,c) = c
+
+-- | Create a two-tuple containing the argument twice
+dupl :: a -> (a,a)
+dupl a = (a,a)
